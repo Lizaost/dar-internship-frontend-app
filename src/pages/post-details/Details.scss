@@ -29,4 +29,23 @@
   .loading-indicator-wrapper{
     margin-top: 15%;
   }
+
+  .post-not-found{
+    margin: 10% auto 2em;
+  }
+
+  .post-not-found-message{
+    font-size: 1.2em;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+
+    @media (max-width: 800px) {
+      width: 80%;
+    }
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+  }
 }

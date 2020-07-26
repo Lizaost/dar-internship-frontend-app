@@ -22,11 +22,17 @@ export const Details = () => {
 
     return (<div className="Details">
         {loaded ?
-            <div className="post-wrapper">
-                <h1 className="post-title">{post.title}</h1>
-                <span className="post-author">Author: User{post.userId}</span>
-                <p className="post-text">{post.body}</p>
-            </div>
+            (post != undefined ?
+                <div className="post-wrapper">
+                    <h1 className="post-title">{post.title}</h1>
+                    <span className="post-author">Author: User{post.userId}</span>
+                    <p className="post-text">{post.body}</p>
+                </div>
+                : <div className="post-not-found">
+                    <h1 className="post-not-found-title">Post not found</h1>
+                    <p className="post-not-found-message">The post with id {id} was not found or could not be loaded.
+                        It was probably deleted or never existed. Check if the page address is correct.</p>
+                </div>)
             : <div className="loading-indicator-wrapper">
                 <LoadingIndicator loadingItem="post"/>
             </div>}

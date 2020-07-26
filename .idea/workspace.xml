@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a77f669a-559f-4671-b501-eb4c5f22f4bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/loading-indicator/Loading.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loading-indicator/Loading.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/post-details/Details.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/posts/Posts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/post-details/Details.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/post-details/Details.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/post-details/Details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/post-details/Details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/posts/Posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/Posts.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,20 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/posts/Posts.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/post-details/Details.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="26" column="78" lean-forward="true" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
+            <state relative-caret-position="209">
+              <caret line="26" column="52" lean-forward="true" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -50,10 +30,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/post-details/Details.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/post-details/Details.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="149">
+              <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -61,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/posts/Posts.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            <state relative-caret-position="585">
+              <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -146,12 +138,12 @@
         <option value="$PROJECT_DIR$/src/services/api.ts" />
         <option value="$PROJECT_DIR$/src/App.scss" />
         <option value="$PROJECT_DIR$/src/pages/home/Home.scss" />
-        <option value="$PROJECT_DIR$/src/pages/posts/Posts.scss" />
         <option value="$PROJECT_DIR$/src/components/loading-indicator/Loadins.scss" />
         <option value="$PROJECT_DIR$/src/components/loading-indicator/Loading.tsx" />
         <option value="$PROJECT_DIR$/src/pages/posts/Posts.tsx" />
-        <option value="$PROJECT_DIR$/src/pages/post-details/Details.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/posts/Posts.scss" />
         <option value="$PROJECT_DIR$/src/pages/post-details/Details.scss" />
+        <option value="$PROJECT_DIR$/src/pages/post-details/Details.tsx" />
       </list>
     </option>
   </component>
@@ -325,7 +317,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595511348391</updated>
       <workItem from="1595511350206" duration="1628000" />
-      <workItem from="1595772378877" duration="11151000" />
+      <workItem from="1595772378877" duration="12044000" />
     </task>
     <task id="LOCAL-00001" summary="Installed node-sass, react-router-dom and @types/react-router-dom packages. &#10;Moved App, and Button and Avatar components stylesheets from css to sccs.">
       <created>1595775211380</created>
@@ -348,11 +340,25 @@
       <option name="project" value="LOCAL" />
       <updated>1595777016948</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished Details page. &#10;Created LoadingIndicator component.&#10;Added getPostById function to api.">
+      <created>1595783945659</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595783945659</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed position of LoadingIndicator on Posts and Details pages.">
+      <created>1595784108260</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595784108260</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12779000" />
+    <option name="totallyTimeSpent" value="13672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1295" height="704" extended-state="6" />
@@ -407,7 +413,9 @@
     <MESSAGE value="Installed node-sass, react-router-dom and @types/react-router-dom packages. &#10;Moved App, and Button and Avatar components stylesheets from css to sccs." />
     <MESSAGE value="Created basic navigation (without styles). Created placeholder components for Posts and Details." />
     <MESSAGE value="Stylized app navigation and home page. Changed color of Hello component text." />
-    <option name="LAST_COMMIT_MESSAGE" value="Stylized app navigation and home page. Changed color of Hello component text." />
+    <MESSAGE value="Finished Details page. &#10;Created LoadingIndicator component.&#10;Added getPostById function to api." />
+    <MESSAGE value="Fixed position of LoadingIndicator on Posts and Details pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed position of LoadingIndicator on Posts and Details pages." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/avatar/Avatar.tsx">
@@ -543,6 +551,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/posts/Posts.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="26" column="52" lean-forward="true" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -550,40 +571,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/posts/Posts.tsx">
+    <entry file="file://$PROJECT_DIR$/src/pages/post-details/Details.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/post-details/Details.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="78" lean-forward="true" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="149">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/posts/Posts.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        <state relative-caret-position="585">
+          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/post-details/Details.scss">
+    <entry file="file://$PROJECT_DIR$/src/pages/post-details/Details.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="389">
+          <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
