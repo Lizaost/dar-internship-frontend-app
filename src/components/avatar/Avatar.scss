@@ -1,0 +1,11 @@
+.avatar {
+  border-radius: 50%;
+  height: 25vh;
+  width: 25vh;
+  transition-duration: 400ms;
+  border: 2px solid white;
+
+  &:hover {
+    border: 2px solid #0044cc;
+  }
+}
