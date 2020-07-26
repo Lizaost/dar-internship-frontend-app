@@ -30,7 +30,10 @@ function App() {
                         <Route path="/posts/:id">
                             <Details />
                         </Route>
-                        <Route path="/">
+                        <Route exact path="/">
+                            <Home />
+                        </Route>
+                        <Route path="/*">
                             <Home />
                         </Route>
                     </Switch>
