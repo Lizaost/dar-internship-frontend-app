@@ -1,14 +1,21 @@
-.Home{
-  .flex-wrapper{
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+
+  .flex-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .buttons-wrapper{
+
+  .buttons-wrapper {
     text-align: center;
     flex-direction: row;
   }
-  .user-info-wrapper{
+
+  .user-info-wrapper {
     flex-direction: column;
   }
 }

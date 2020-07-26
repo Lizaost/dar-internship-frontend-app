@@ -1,0 +1,32 @@
+.Details {
+  padding: 0.5em 1.5em;
+  color: black;
+
+  .post-title {
+    margin: 0.5em 0.5em 0.5em 0;
+  }
+
+  .post-author{
+    color: #666;
+    display: block;
+    text-align: center;
+    margin: 0.8em auto;
+  }
+
+  .post-text {
+    width: 80%;
+    margin: auto;
+
+    @media (max-width: 800px) {
+      width: 90%;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  .loading-indicator-wrapper{
+    margin-top: 30%;
+  }
+}

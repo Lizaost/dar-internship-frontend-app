@@ -1,0 +1,47 @@
+.Posts {
+  h1{
+    margin: 0 0.5em 0.5em;
+  }
+
+  .posts-list {
+    width: auto;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .post-item {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      box-sizing: border-box;
+      flex: 0 1 calc(25% - 1em);
+      border: #0044cc solid 2px;
+      transition-duration: 400ms;
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        box-shadow: #0044cc 0 0 4px;
+        cursor: pointer;
+        h3 {
+          color: #0044cc;
+          transition-duration: 400ms;
+        }
+      }
+
+      h3 {
+        margin: 0 0.5em;
+        transition-duration: 400ms;
+      }
+    }
+  }
+
+  .loading-indicator{
+    font-size: 1.2em;
+    color: #0044cc;
+    text-align: center;
+    margin-top: 30%;
+  }
+
+}
