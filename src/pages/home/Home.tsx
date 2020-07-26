@@ -47,12 +47,13 @@ export const Home: React.FunctionComponent = () => {
     };
 
     return (
-        <div className="App">
-            <div className="App-wrapper">
-                {loggedIn ? <div className="UserInfo-wrapper">
+        <div className="Home">
+            <div className="Home-wrapper">
+                {loggedIn ? <div className="flex-wrapper user-info-wrapper">
                     <Avatar src={image}/>
                     <Hello name={name}/>
                 </div> : null}
+                <div className="flex-wrapper buttons-wrapper">
                 {loggedIn ?
                     <Button className="logout-button" clickHandler={btnClickLogoutHandler} text="Log out"/> :
                     <Button className="login-button" clickHandler={btnClickLoginHandler} text="Log in"/>}
@@ -67,6 +68,7 @@ export const Home: React.FunctionComponent = () => {
                             clickHandler={btnClickChangeAvatarHandler}
                             text="Set random avatar"/>
                     : null}
+                </div>
             </div>
         </div>
     );

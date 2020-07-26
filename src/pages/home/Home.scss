@@ -1,0 +1,14 @@
+.Home{
+  .flex-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttons-wrapper{
+    text-align: center;
+    flex-direction: row;
+  }
+  .user-info-wrapper{
+    flex-direction: column;
+  }
+}

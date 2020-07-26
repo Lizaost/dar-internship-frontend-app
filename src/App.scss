@@ -1,20 +1,44 @@
 .App {
+  --brand-color: #0044cc;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
-  .App-wrapper {
-    padding: 1rem 1.5rem;
+  .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      padding: 0;
+      list-style: none;
+      margin-right: 2rem;
+
+      li {
+        margin-right: 1rem;
+
+        a {
+          color: var(--brand-color);
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 1.2rem;
+          padding: 0.5rem 0;
+
+          &:hover {
+            border-bottom: 2px solid var(--brand-color);
+          }
+        }
+      }
+    }
   }
 
 
-  .UserInfo-wrapper {
+  .content {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
-
 }
+
