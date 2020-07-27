@@ -7,7 +7,7 @@ import {LoadingIndicator} from "../../components/loading-indicator/Loading";
 
 export const Details = () => {
     let {id} = useParams();
-    const [post, setPost] = useState<Post>({id: -1, body: "", title: "", userId: -1});
+    const [post, setPost] = useState<Post | null>(null);
     const [loaded, setLoaded] = useState<boolean>(false);
 
     useEffect(() => {
