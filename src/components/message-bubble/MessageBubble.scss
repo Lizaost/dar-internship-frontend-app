@@ -1,0 +1,20 @@
+.MessageBubble {
+  margin: 0.5rem;
+  width: 80%;
+}
+
+.message {
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.1rem;
+  background: #ddd;
+  margin-left: 0;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}
+
+.my-message {
+  margin-left: 20%;
+  background: #bcbcbc;
+  border-radius: 0.5rem 0.5rem 0.1rem 0.5rem;
+}

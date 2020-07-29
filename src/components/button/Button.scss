@@ -15,6 +15,10 @@
     background-color: #0044cc;
     color: white;
   }
+
+  &:disabled{
+    filter: opacity(25%);
+  }
 }
 
 .login-button {

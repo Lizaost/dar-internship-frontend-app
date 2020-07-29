@@ -4,14 +4,18 @@ import './Button.scss';
 type Props = {
     className: string;
     text: string;
-    clickHandler: () => void;
+    type?: 'button' | 'submit' | 'reset';
+    clickHandler?: () => void;
+    disabled?: boolean;
 };
 
-export const Button: React.FunctionComponent<Props> = ({text, className, clickHandler}) => {
-    console.log(className);
+export const Button: React.FunctionComponent<Props> = ({text, type, className, clickHandler, disabled}) => {
+    console.log("disabled: " + disabled);
     return (
         <button className={"Button " + className}
-                onClick={clickHandler}>
+                onClick={clickHandler}
+                type={type ? type : "submit"}
+                disabled={disabled}>
             {text}
         </button>
     );

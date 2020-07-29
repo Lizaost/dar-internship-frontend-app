@@ -1,0 +1,34 @@
+.Chat {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+
+  .chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    max-height: 270px;
+  }
+
+  .message-input-wrapper {
+    height: 80px;
+  }
+
+  .message-input-form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .message-input{
+    height: 100%;
+    flex: 1;
+  }
+
+  .messages-list-wrapper {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 0.3rem 1rem;
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+  }
+}

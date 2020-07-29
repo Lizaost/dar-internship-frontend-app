@@ -1,0 +1,19 @@
+.Message {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+
+  &.my-message-wrapper {
+    flex-direction: row-reverse;
+  }
+
+  .avatar {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px;
+  }
+
+  .message-bubble {
+    flex: 1;
+  }
+}
