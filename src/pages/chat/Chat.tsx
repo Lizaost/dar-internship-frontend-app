@@ -1,13 +1,24 @@
-import React, {useState} from "react";
+import React, {useEffect, useReducer, useState} from "react";
 import {Button} from "../../components/button/Button";
 import "./Chat.scss";
 import {Message} from "../../components/message/Message";
 import {Textarea} from "../../components/textarea/Textarea";
+import {UserInfo} from "../../types/interfaces";
+import {ChatActions, chatStateReducer, useWebSocket} from "../../services/chat";
 
-export const Chat: React.FunctionComponent = () => {
+type Props = {
+    user?: UserInfo | null;
+}
+
+export const Chat: React.FunctionComponent<Props> = ({user}) => {
 
     const [message, setMessage] = useState<string>("");
     const [isSendingAllowed, setIsSendingAllowed] = useState<boolean>(false);
+
+    const [state, dispatch] = useReducer(chatStateReducer, {messages: []});
+    console.log(state);
+
+    const socketClient = useWebSocket({userId: user?.firstname});
 
     const messageHandler = (value: string) => {
         console.log("Message: " + value);
@@ -26,9 +37,24 @@ export const Chat: React.FunctionComponent = () => {
         event.preventDefault();
         console.log("sending message");
         console.log("Message: \n" + message);
+        socketClient.sendMessage(message);
     };
 
-    console.log("isSendingAllowed: " + isSendingAllowed);
+    const onMessage = ({data}: {data: string}) => {
+        console.log(data);
+        dispatch({
+            type: ChatActions.ADD_MESSAGE,
+            payload: data
+        })
+    };
+
+    useEffect(() => {
+        socketClient.eventEmitter.on("message", onMessage);
+        return () => {
+            socketClient.eventEmitter.off("message", onMessage);
+            socketClient.close();
+        }
+    }, []);
 
     return (<div className="Chat">
         <div className="chat-wrapper">

@@ -26,7 +26,7 @@ export const Home: React.FunctionComponent = () => {
         event.preventDefault();
         console.log(userInfo);
         if (userInfo?.firstname) {
-            history.push('/chat');
+            history.push('/room');
         }
     };
 

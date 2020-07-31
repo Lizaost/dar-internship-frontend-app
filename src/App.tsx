@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import {Home} from "./pages/home/Home";
 import {Posts} from "./pages/posts/Posts";
 import {Details} from "./pages/post-details/Details";
-import {Chat} from "./pages/chat/Chat";
+import {Room} from "./pages/room/Room";
 
 
 function App() {
@@ -22,14 +22,14 @@ function App() {
                             <Link to="/posts">Posts</Link>
                         </li>
                         <li>
-                            <Link to="/chat">Chat</Link>
+                            <Link to="/room">Room</Link>
                         </li>
                     </ul>
                 </nav>
                 <div className="content">
                     <Switch>
-                        <Route path="/chat">
-                            <Chat />
+                        <Route path="/room">
+                            <Room />
                         </Route>
                         <Route exact path="/posts">
                             <Posts />

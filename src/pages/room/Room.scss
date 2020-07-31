@@ -1,0 +1,11 @@
+.Room{
+  display: flex;
+  flex-direction: row;
+
+  .Chat{
+    margin-left: 10px;
+    height: 500px;
+    max-height: 500px;
+    margin-top: 100px;
+  }
+}
