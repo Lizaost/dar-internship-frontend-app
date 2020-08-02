@@ -8,6 +8,8 @@
   .chat-wrapper {
     display: flex;
     flex-direction: column;
+    max-height: 100%;
+    height: 100%;
   }
 
   .message-input-wrapper {
@@ -30,5 +32,18 @@
     padding: 0.3rem 1rem;
     border-top: 1px #ccc solid;
     border-bottom: 1px #ccc solid;
+  }
+
+  .emoji-picker-wrapper{
+    position: absolute;
+    z-index: 100;
+    bottom: 100px;
+    margin-left: 10px;
+  }
+  .open-picker{
+    display: block;
+  }
+  .closed-picker{
+    display: none;
   }
 }

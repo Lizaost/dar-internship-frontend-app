@@ -1,10 +1,11 @@
 import React, {useEffect, useReducer, useState} from "react";
 import {Button} from "../../components/button/Button";
 import "./Chat.scss";
-import {Message} from "../../components/message/Message";
 import {Textarea} from "../../components/textarea/Textarea";
 import {UserInfo} from "../../types/interfaces";
 import {ChatActions, chatStateReducer, useWebSocket} from "../../services/chat";
+import {ChatMessages} from "../../components/chat-messages/ChatMessages";
+import Picker from 'emoji-picker-react';
 
 type Props = {
     user?: UserInfo | null;
@@ -14,11 +15,36 @@ export const Chat: React.FunctionComponent<Props> = ({user}) => {
 
     const [message, setMessage] = useState<string>("");
     const [isSendingAllowed, setIsSendingAllowed] = useState<boolean>(false);
+    const [isPickerOpen, setIsPickerOpen] = useState<boolean>(false);
+
+    const [chosenEmoji, setChosenEmoji] = useState({emoji: null, isSelected: false});
 
     const [state, dispatch] = useReducer(chatStateReducer, {messages: []});
     console.log(state);
+    console.log(chosenEmoji);
+    console.log("Message = " + message);
 
     const socketClient = useWebSocket({userId: user?.firstname});
+
+    const onEmojiClick = (event: any, emojiObject: any) => {
+        console.log("Emoji is picked");
+        setChosenEmoji(emojiObject);
+    };
+
+    // Since state (chosenEmoji) is updates asynchronously, add chosenEmoji
+    // to current message each time it is changed using useEffect hook
+    useEffect(() => {
+        let emoji = chosenEmoji?.emoji ? chosenEmoji?.emoji : "";
+        console.log(emoji);
+        let newMessage = message + emoji;
+        console.log("newMessage = " + newMessage);
+        setMessage(newMessage);
+    }, [chosenEmoji]);
+
+    const toggleEmojiPicker = () => {
+        let newPickerState = !isPickerOpen;
+        setIsPickerOpen(newPickerState);
+    };
 
     const messageHandler = (value: string) => {
         console.log("Message: " + value);
@@ -38,9 +64,10 @@ export const Chat: React.FunctionComponent<Props> = ({user}) => {
         console.log("sending message");
         console.log("Message: \n" + message);
         socketClient.sendMessage(message);
+        setMessage(" ");
     };
 
-    const onMessage = ({data}: {data: string}) => {
+    const onMessage = ({data}: { data: string }) => {
         console.log(data);
         dispatch({
             type: ChatActions.ADD_MESSAGE,
@@ -58,37 +85,28 @@ export const Chat: React.FunctionComponent<Props> = ({user}) => {
 
     return (<div className="Chat">
         <div className="chat-wrapper">
-            <div className="messages-list-wrapper">
-                <Message avatar="/images/star_wars_wallpaper_2.png"
-                         message="Sith code"/>
-                <Message avatar="/images/star_wars_wallpaper_1.png"
-                         isMyMessage={true}
-                         message="Peace is a lie, there is only passion."/>
-                <Message avatar="/images/star_wars_wallpaper_1.png"
-                         isMyMessage={true}
-                         message="Through passion, I gain strength."/>
-                <Message avatar="/images/star_wars_wallpaper_4.png"
-                         message="Through strength, I gain power."/>
-                <Message avatar="/images/star_wars_wallpaper_1.png"
-                         isMyMessage={true}
-                         message="Through power, I gain victory."/>
-                <Message avatar="/images/star_wars_wallpaper_3.png"
-                         message="Through victory, my chains are broken."/>
-                <Message avatar="/images/star_wars_wallpaper_2.png"
-                         message="The Force shall free me."/>
-                <Message avatar="/images/star_wars_wallpaper_1.png"
-                         isMyMessage={true}
-                         message={'Nwûl tash.\nDzwol shâsotkun.Shâsotjontû châtsatul nu tyûk.' +
-                         '\nTyûkjontû châtsatul nu midwan.\nMidwanjontû châtsatul nu asha.\n' +
-                         'Ashajontû kotswinot itsu nuyak.\nWonoksh Qyâsik nun.'}/>
+            <ChatMessages
+                messages={state.messages}
+                user={user}/>
+
+            <div className={"emoji-picker-wrapper " + (isPickerOpen ? "open-picker" : "closed-picker")}>
+                <Picker onEmojiClick={onEmojiClick}/>
             </div>
+
             <div className="message-input-wrapper">
                 <form onSubmit={submitHandler} className="message-input-form">
+                    <Button
+                        className={"open-emoji-picker "}
+                        text={":)"}
+                        clickHandler={toggleEmojiPicker}
+                        type={"button"}/>
+
                     <Textarea name="message"
                               placeholder="Enter message"
                               required={true}
                               onChange={messageHandler}
-                              onEmpty={emptyMessageHandler}/>
+                              onEmpty={emptyMessageHandler}
+                              text={message}/>
                     <Button className="send-message" disabled={!isSendingAllowed} text="Send"/>
                 </form>
             </div>
