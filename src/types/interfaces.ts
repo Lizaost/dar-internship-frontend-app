@@ -23,3 +23,8 @@ export interface UserInfo {
     firstname: string;
     lastname?: string;
 }
+
+export interface Video {
+    id: string;
+    title: string;
+}

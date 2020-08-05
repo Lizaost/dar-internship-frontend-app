@@ -20,14 +20,12 @@ export const Chat: React.FunctionComponent<Props> = ({user}) => {
     const [chosenEmoji, setChosenEmoji] = useState({emoji: null, isSelected: false});
 
     const [state, dispatch] = useReducer(chatStateReducer, {messages: []});
-    console.log(state);
-    console.log(chosenEmoji);
-    console.log("Message = " + message);
+    console.log('Chat User');
+    console.log(user);
 
     const socketClient = useWebSocket({userId: user?.firstname});
 
     const onEmojiClick = (event: any, emojiObject: any) => {
-        console.log("Emoji is picked");
         setChosenEmoji(emojiObject);
     };
 
@@ -35,9 +33,7 @@ export const Chat: React.FunctionComponent<Props> = ({user}) => {
     // to current message each time it is changed using useEffect hook
     useEffect(() => {
         let emoji = chosenEmoji?.emoji ? chosenEmoji?.emoji : "";
-        console.log(emoji);
         let newMessage = message + emoji;
-        console.log("newMessage = " + newMessage);
         setMessage(newMessage);
     }, [chosenEmoji]);
 
@@ -76,6 +72,7 @@ export const Chat: React.FunctionComponent<Props> = ({user}) => {
     };
 
     useEffect(() => {
+        socketClient.open();
         socketClient.eventEmitter.on("message", onMessage);
         return () => {
             socketClient.eventEmitter.off("message", onMessage);

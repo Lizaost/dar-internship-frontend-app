@@ -15,7 +15,6 @@ export const Textarea: React.FunctionComponent<Props> = ({name, text, required, 
     const [inputValue, setInputValue] = useState<string>('');
     const [inputChanged, setInputChanged] = useState<boolean>(false);
     const [inputError, setInputError] = useState<{ isEmpty?: boolean }>({});
-    const textareaRef = HTMLTextAreaElement;
 
     const checkField = () => {
 

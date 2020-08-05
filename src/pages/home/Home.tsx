@@ -1,14 +1,21 @@
-import React, {useEffect, useReducer, useRef, useState} from 'react';
+import React, {useContext, useEffect, useReducer, useRef, useState} from 'react';
 import {Button} from '../../components/button/Button';
 
 import './Home.scss';
 import {Input} from "../../components/input/Input";
 import {useHistory} from "react-router";
+import {UserInfo} from '../../types/interfaces';
+import {UserContext} from "../../services/context";
 
+type Props = {
+    setUser: (user: UserInfo) => void;
+}
 
-export const Home: React.FunctionComponent = () => {
+export const Home: React.FunctionComponent<Props> = ({setUser}) => {
 
-    const [userInfo, setUserInfo] = useState<{ firstname: string; lastname: string } | null>(null);
+    const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+
+    const userContext = useContext(UserContext);
 
     const history = useHistory();
 
@@ -26,7 +33,8 @@ export const Home: React.FunctionComponent = () => {
         event.preventDefault();
         console.log(userInfo);
         if (userInfo?.firstname) {
-            history.push('/room');
+            userContext?.setUser(userInfo);
+            history.push('/videos');
         }
     };
 
